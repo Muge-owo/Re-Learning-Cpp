@@ -1,0 +1,70 @@
+{
+  "course": "cpp-fundamentals",
+  "language": "cpp",
+  "language_id": 54,
+  "entrypoint": "main.cpp",
+  "version": 1,
+  "content_hash": "ddff32bb54b22417",
+  "lessons": [
+    {
+      "slug": "hello-world",
+      "tests_hash": "214f8c5cf410"
+    },
+    {
+      "slug": "variables-and-types",
+      "tests_hash": "4ccc141f8a2f"
+    },
+    {
+      "slug": "numbers-and-math",
+      "tests_hash": "69adc0cc5957"
+    },
+    {
+      "slug": "string",
+      "tests_hash": "1e5e43a69567"
+    },
+    {
+      "slug": "output-formatting",
+      "tests_hash": "eb06fa6128a5"
+    },
+    {
+      "slug": "conditionals",
+      "tests_hash": "1720a777f726"
+    },
+    {
+      "slug": "loops",
+      "tests_hash": "d936b3338ca8"
+    },
+    {
+      "slug": "functions",
+      "tests_hash": "4e6757737a4d"
+    },
+    {
+      "slug": "references-vs-pointers",
+      "tests_hash": "61eeb0498b2a"
+    },
+    {
+      "slug": "vector",
+      "tests_hash": "824618d94a04"
+    },
+    {
+      "slug": "maps",
+      "tests_hash": "6da2ebbae97c"
+    },
+    {
+      "slug": "algorithms",
+      "tests_hash": "2ef2107d7b83"
+    },
+    {
+      "slug": "classes",
+      "tests_hash": "c3ca27f8f320"
+    },
+    {
+      "slug": "inheritance",
+      "tests_hash": "2fb175e44ddb"
+    },
+    {
+      "slug": "templates-intro",
+      "tests_hash": "c1d25ada0b0a"
+    }
+  ]
+}
