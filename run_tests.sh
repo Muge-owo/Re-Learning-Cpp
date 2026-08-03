@@ -107,3 +107,9 @@ done
 echo
 echo "$pass passed, $fail failed"
 [ "$fail" -eq 0 ]
+
+# if [ -f "a.out" ]; 
+#   then rm a.out 
+# fi
+
+[ -f "a.out" ] && rm a.out
