@@ -2,18 +2,11 @@
 #include <iomanip>
 
 int main() {
-    char ch{};
-    std::cin >> ch;
+    std::string s1{}, s2{};
 
-    if(ch >= 'A' && ch <= 'Z')
-        for(int i = ch - 'A'; i >= 0; i--){
-            std::cout << std::setw(i+1) << std::setfill(' ') << 'A';
-            for(int j = 1; j <= ch-'A'-i; j++)
-                std::cout << static_cast<char>(j+'A');
-            for(int j = ch-'A'-i-1; j >= 0; j--)
-                std::cout << static_cast<char>(j+'A');
-            std::cout << std::endl;
-        }
+    std::getline(std::cin, s1);
+    std::getline(std::cin, s2);
+    std::cout << "Hi, " << s1 << "! You are " << s2 << " years old." << std::endl;
 
     return 0;
 }
