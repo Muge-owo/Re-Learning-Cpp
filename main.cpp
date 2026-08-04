@@ -1,12 +1,20 @@
 #include <iostream>
 
-int square(int n) { return n*n; };
+void swap(int &a, int &b)
+{
+    if(&a != &b){
+        a ^= b;
+        b ^= a;
+        a ^= b;
+    }
+}
 
 int main(int argc, const char *argv[])
 {
-    int n{};
-    std::cin >> n;
-    std::cout << square(n) << std::endl;
+    int a{}, b{};
+    std::cin >> a >> b;
+    swap(a, b);
+    std::cout << a << " " << b << std::endl;
 
     return 0;
 }
