@@ -1,15 +1,12 @@
 #include <iostream>
 
+int square(int n) { return n*n; };
+
 int main(int argc, const char *argv[])
 {
     int n{};
     std::cin >> n;
-
-    long long total{};
-    for(int i = n; i > 0; i--)
-        total += i;
-
-    std::cout << total << std::endl;
+    std::cout << square(n) << std::endl;
 
     return 0;
 }
