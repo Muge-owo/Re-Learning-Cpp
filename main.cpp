@@ -25,6 +25,8 @@ int main() {
         std::cout << "Fizz";
     if(a % 5 == 0)
         std::cout << "Buzz";
+    if(a % 5 && a % 3)
+        std::cout << a;
     std::cout << std::endl;
 
 
