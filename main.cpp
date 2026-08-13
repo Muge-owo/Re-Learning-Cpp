@@ -1,26 +1,40 @@
 #include <iostream>
+#include <iomanip>
 
-class Rectangle{
-private:
-    int width;
-    int height;
-
+class Shape{
 public:
-    Rectangle(int w, int h) :width(w), height(h) {}
+    virtual double area() const = 0;
+    virtual ~Shape() = default;
+};
 
-    int area() const { return width * height; }
-    int perimeter() const { return 2 * (width + height); }
+class Square : public Shape{
+    double side;
+public:
+    Square(double side) : side(side) {}
+    double area() const override { return side * side; }
+};
+
+class Circle : public Shape{
+    double r;
+public:
+    Circle(double r) : r(r) {}
+    double area() const override { return 3.14159 * r * r; }
 };
 
 int main(int argc, const char *argv[])
 {
-    int w{}, h{};
-    std::cin >> w >> h;
+    double side{}, r{};
 
-    Rectangle rec1(w, h);
+    std::cin >> side >> r;
 
-    std::cout << "area: " << rec1.area() << std::endl;
-    std::cout << "perimeter: " << rec1.perimeter() << std::endl;
+    Shape *squa = new Square(side);
+    Shape *circ = new Circle(r);
+
+    std::cout << std::fixed << std::setprecision(2) << squa->area() << std::endl ;
+    std::cout << std::fixed << std::setprecision(2) << circ->area() << std::endl ;
+
+    delete squa;
+    delete circ;
 
     return 0;
 }
