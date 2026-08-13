@@ -1,14 +1,16 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <map>
 
 int main(int argc, const char *argv[])
 {
-    std::vector<int> nums;
-    int x;
-    while(std::cin >> x) nums.push_back(x);
+    std::map<std::string, int>  mWord{};
 
-    std::cout << *std::max_element(nums.begin(), nums.end()) << std::endl;
+    std::string word;
+    while(std::cin >> word){
+        mWord[word]++;
+    }
+
+    std::cout << mWord.size() << std::endl;
 
     return 0;
 }
