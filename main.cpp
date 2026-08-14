@@ -1,40 +1,13 @@
-#include <iostream>
-#include <iomanip>
-
-class Shape{
-public:
-    virtual double area() const = 0;
-    virtual ~Shape() = default;
-};
-
-class Square : public Shape{
-    double side;
-public:
-    Square(double side) : side(side) {}
-    double area() const override { return side * side; }
-};
-
-class Circle : public Shape{
-    double r;
-public:
-    Circle(double r) : r(r) {}
-    double area() const override { return 3.14159 * r * r; }
-};
+#include "main.h"
 
 int main(int argc, const char *argv[])
 {
-    double side{}, r{};
+    int a{}, b{};
+    double x{}, y{};
 
-    std::cin >> side >> r;
-
-    Shape *squa = new Square(side);
-    Shape *circ = new Circle(r);
-
-    std::cout << std::fixed << std::setprecision(2) << squa->area() << std::endl ;
-    std::cout << std::fixed << std::setprecision(2) << circ->area() << std::endl ;
-
-    delete squa;
-    delete circ;
+    std::cin >> a >> b >> x >> y;
+    std::cout << sumPair(a, b) << std::endl;
+    std::cout << std::fixed << std::setprecision(2) << sumPair(x, y) << std::endl;
 
     return 0;
 }
